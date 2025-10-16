@@ -138,32 +138,64 @@
 //     }
 // }
 
+// import java.util.Scanner;
+
+// public class Lab2 {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter the number of copies to print: ");
+//         int copies = sc.nextInt();
+
+//         double pricePerCopy;
+
+//         if (copies <= 99) {
+//             pricePerCopy = 0.30;
+//         } else if (copies <= 499) {
+//             pricePerCopy = 0.28;
+//         } else if (copies <= 799) {
+//             pricePerCopy = 0.27;
+//         } else if (copies <= 1000) {
+//             pricePerCopy = 0.26;
+//         } else {
+//             pricePerCopy = 0.25;
+//         }
+
+//         double totalPrice = copies * pricePerCopy;
+
+//         System.out.println("Number of copies: " + copies);
+//         System.out.println("Price per copy: $" + pricePerCopy);
+//         System.out.println("Total price: $" + totalPrice);
+//     }
+// }
+
+// TaxCalculator.java
 import java.util.Scanner;
 
 public class Lab2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number of copies to print: ");
-        int copies = sc.nextInt();
 
-        double pricePerCopy;
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
 
-        if (copies <= 99) {
-            pricePerCopy = 0.30;
-        } else if (copies <= 499) {
-            pricePerCopy = 0.28;
-        } else if (copies <= 799) {
-            pricePerCopy = 0.27;
-        } else if (copies <= 1000) {
-            pricePerCopy = 0.26;
+        System.out.print("Enter your income: ");
+        double income = sc.nextDouble();
+
+        double tax = 0;
+
+        if (age < 18) {
+            tax = 0;
         } else {
-            pricePerCopy = 0.25;
+            if (income < 10000)
+                tax = 0;
+            else if (income <= 20000)
+                tax = income * 0.05;
+            else
+                tax = income * 0.10;
         }
 
-        double totalPrice = copies * pricePerCopy;
-
-        System.out.println("Number of copies: " + copies);
-        System.out.println("Price per copy: $" + pricePerCopy);
-        System.out.println("Total price: $" + totalPrice);
+        System.out.println("Your calculated tax is: $" + tax);
+        
+        // sc.close();
     }
 }
