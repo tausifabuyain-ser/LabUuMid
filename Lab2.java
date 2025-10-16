@@ -52,6 +52,118 @@
 
 //find Out the cgpa
 
-public class Lab2{
-    
+// import java.util.Scanner;
+
+// public class Lab2{
+//     public static void main(String [] args){
+//         System.out.print("Enter ther first course mark out of 15 ");
+//         Scanner sc = new Scanner(System.in);
+//         int a = sc.nextInt();
+//         System.out.println("Enter ther first course mark out of 15: ");
+
+//         int b = sc.nextInt();
+//         System.out.println("Enter ther first course mark out of 15: ");
+
+//         int c = sc.nextInt();
+//         System.out.println("Enter ther first course mark out of 15: ");
+
+//         int d = sc.nextInt();
+//         System.out.println("Enter ther first course mark out of 15: ");
+
+//         int e = sc.nextInt();
+
+//         int allMarks= a+b+c+d+e;
+
+//         double percentage = (allMarks*100)/75;
+
+//         System.out.println("The percentage is: "+ percentage);
+
+//     }
+// }
+
+//Printing price
+
+// import java.util.Scanner;
+
+// public class Lab2 {
+//     public static void main(String[] args) {
+//         System.err.println("Enter the number of print: ");
+//         Scanner sc = new Scanner(System.in);
+//         int inputNum = sc.nextInt();
+
+//         if (inputNum < 100) {
+//             System.out.println("The total num of print is " + inputNum);
+//             double TotalPrize = inputNum * 0.30;
+//             System.out.println("The total Prize is :$ " + TotalPrize);
+
+//         } else if (inputNum < 500) {
+//             System.out.println("The total num of print is " + inputNum);
+//             double PrizeForHundred = 99 * 0.30;
+//             int remaining = inputNum - 99;
+//             double TotalPrize = PrizeForHundred + (remaining * 0.28);
+//             System.out.println("The total Prize is :$ " + TotalPrize);
+
+//         } else if (inputNum < 800) {
+//             System.out.println("The total num of print is " + inputNum);
+//             double PrizeForHundred = 99 * 0.30;
+//             double PrizeForFiveHundred = 400 * 0.28;
+
+//             int remaining = inputNum - 499;
+//             double TotalPrize = PrizeForHundred + PrizeForFiveHundred + (remaining * 0.27);
+//             System.out.println("The total Prize is :$ " + TotalPrize);
+
+//         } else if (inputNum <= 1000) {
+//             System.out.println("The total num of print is " + inputNum);
+//             double PrizeForHundred = 99 * 0.30;
+//             double PrizeForFiveHundred = 400 * 0.28;
+//             double PrizeForEightHundred = 300 * 0.27;
+
+//             int remaining = inputNum - 799;
+//             double TotalPrize = PrizeForHundred + PrizeForFiveHundred + PrizeForEightHundred + (remaining * 0.26);
+//             System.out.println("The total Prize is :$ " + TotalPrize);
+
+//         } else if (inputNum > 1000) {
+//             System.out.println("The total num of print is " + inputNum);
+//             double PrizeForHundred = 99 * 0.30;
+//             double PrizeForFiveHundred = 400 * 0.28;
+//             double PrizeForEightHundred = 300 * 0.27;
+//             double PrizeForOneThousands = 201 * 0.26;
+
+//             int remaining = inputNum - 1000;
+//             double TotalPrize = PrizeForHundred + PrizeForFiveHundred + PrizeForEightHundred + PrizeForOneThousands
+//                     + (remaining * 0.25);
+//             System.out.println("The total Prize is :$ " + TotalPrize);
+
+//         }
+//     }
+// }
+
+import java.util.Scanner;
+
+public class Lab2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of copies to print: ");
+        int copies = sc.nextInt();
+
+        double pricePerCopy;
+
+        if (copies <= 99) {
+            pricePerCopy = 0.30;
+        } else if (copies <= 499) {
+            pricePerCopy = 0.28;
+        } else if (copies <= 799) {
+            pricePerCopy = 0.27;
+        } else if (copies <= 1000) {
+            pricePerCopy = 0.26;
+        } else {
+            pricePerCopy = 0.25;
+        }
+
+        double totalPrice = copies * pricePerCopy;
+
+        System.out.println("Number of copies: " + copies);
+        System.out.println("Price per copy: $" + pricePerCopy);
+        System.out.println("Total price: $" + totalPrice);
+    }
 }
